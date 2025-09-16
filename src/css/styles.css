@@ -7,12 +7,134 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.form input[type="text"] {
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  margin-right: 8px;
+}
+
+.form button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  background: #4e75ff;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery-item {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+.gallery-item .info {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.load-more {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: #4e75ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.load-more:hover {
+  background-color: #6c8cff;
+}
+
+.loader {
+  display: block;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4e75ff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
